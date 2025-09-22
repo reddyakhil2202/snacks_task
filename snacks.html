@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body, html {
+            position: relative;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background: #f5f5f5;
+        }
+        body {
+            position: absolute;
+            top: 100px;
+            left: 370px;
+        }
+        .first_box{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 35px;
+            width: 600px;
+            position: relative; 
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            border-radius: 6px 6px 0 0;
+            padding: 20px;
+        }
+        .first_box label{
+            display: flex;
+            width: 50%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            /* transition: 2s ease; */
+
+        }
+         input#eat:checked~.first_box label[for="eat"],
+         input#drink:checked~.first_box label[for="drink"]
+         {
+            background-color: black;
+            color: white;
+
+        }
+        #eat,#drink{
+            display: none;
+        }
+        .content_box{
+            width: 600px;
+            background: white;
+             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+             padding: 20px; 
+             display: none;
+        }
+        input#eat:checked~#eatcontent{
+            display: inline-block;
+
+        }
+        input#drink:checked~#drinkcontent{
+            display: inline-block;
+        }
+        h1{
+            color: chocolate;
+            font-style: italic;
+            
+        }
+</style>
+<body>
+    <h1>AR HUNGER BOX</h1>
+   
+    <input type="radio" name="tab" id="eat" checked>
+    <input type="radio" name="tab" id="drink">
+     <div class="first_box">
+        <label for="eat" class="eat">Eat</label>
+        <label for="drink" class="drink">Drink</label>
+    </div>
+    <div id="eatcontent" class="content_box">
+        
+        <h3>Burger</h3>
+        <p>Cheese burger with fries - 5.50</p>
+        <h3>Pizza</h3>
+        <p>Margherita pizza - 7.00</p>
+        <h3>Pasta</h3>
+        <p>Creamy Alfredo pasta - 6.50</p>
+        <h3>Sandwiches</h3>
+        <p>Club Sandwich - $5.00</p>
+        <h3>Salads</h3>
+        <p>Caesar Salad - $4.50</p>
+        
+    </div>
+
+    <div id="drinkcontent" class="content_box">
+        <h3>Coffee</h3>
+        <p>Regular coffee 2.50</p>
+        <h3>Chocolato</h3>
+        <p>Chocolate espresso with milk 4.50</p>
+        <h3>Corretto</h3>
+        <p>Whiskey and coffee 5.00</p>
+        <h3>Iced Tea</h3>
+        <p>Hot tea, except not hot 3.00</p>
+        <h3>Soda</h3>
+        <p>Coke, Sprite, Fanta, etc. 2.50</p>
+    </div>
+</body>
+</html>
